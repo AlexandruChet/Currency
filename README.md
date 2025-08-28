@@ -1,14 +1,15 @@
 # 💱 Currency Converter
 
-A simple **C++ program** to convert various currencies to **USD**.
+A **simple C++ program** to convert various currencies to **USD**.
 
 ---
 
 ## 🔹 Features
 
-- Convert any supported currency to USD
-- Easy to extend with new currencies
-- Simple and clean code
+- 🌍 Convert any supported currency to USD  
+- ⚡ Fast and efficient  
+- ✨ Easy to extend with new currencies  
+- 🧹 Clean and readable code  
 
 ---
 
@@ -42,10 +43,10 @@ int main() {
     double amount;
     string from_currency;
 
-    cout << "Enter amount: ";
+    cout << "💰 Enter amount: ";
     cin >> amount;
 
-    cout << "Enter currency: ";
+    cout << "💱 Enter currency code: ";
     cin >> from_currency;
 
     double from_rate = 0;
@@ -57,13 +58,20 @@ int main() {
     }
 
     if (from_rate == 0) {
-        cout << "Error: Currency not found!" << endl;
+        cout << "❌ Error: Currency not found!" << endl;
         return 1;
     }
 
     double result = convert_to_usd(amount, from_rate);
     cout << fixed << setprecision(2);
-    cout << amount << " " << from_currency << " = " << result << " USD" << endl;
+    cout << "💵 " << amount << " " << from_currency << " = " 
+         << result << " USD" << endl;
 
     return 0;
 }
+
+```
+💰 Enter amount: 100
+💱 Enter currency code: EUR
+💵 100 EUR = 109.89 USD
+```
